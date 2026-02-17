@@ -35,7 +35,7 @@ export function RegisterPage() {
     <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
       <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <h1 className="text-2xl font-semibold text-slate-900">Create account</h1>
-        <p className="mt-2 text-sm text-slate-600">Join OSSN Web to connect with your network.</p>
+        <p className="mt-2 text-sm text-slate-600">Join Billboard to connect with your network.</p>
         <form className="mt-6 space-y-4" onSubmit={onSubmit}>
           <div>
             <label className="block text-sm font-medium text-slate-700">Name</label>

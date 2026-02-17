@@ -2,7 +2,7 @@ export function HomePage() {
   const quickActions = ['Create post', 'Start live video', 'Upload photos'];
   const stories = ['Alice • 5m', 'Bob • 12m', 'Carol • 20m'];
   const feed = [
-    { author: 'Alice', text: 'Excited to join OSSN!', time: '2h' },
+    { author: 'Alice', text: 'Excited to join Billboard!', time: '2h' },
     { author: 'Bob', text: 'Who wants to pair on a side project?', time: '3h' },
     { author: 'Carol', text: 'Just launched my new portfolio 🎉', time: '6h' },
   ];

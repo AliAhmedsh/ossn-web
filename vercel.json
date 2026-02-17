@@ -1,0 +1,55 @@
+{
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Request-Id",
+        "Cross-Origin-Opener-Policy": "unsafe-none",
+        "Cross-Origin-Embedder-Policy": "unsafe-none",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+      }
+    },
+    {
+      "src": "/((?!assets/).*)",
+      "headers": {
+        "Cross-Origin-Opener-Policy": "unsafe-none",
+        "Cross-Origin-Embedder-Policy": "unsafe-none",
+        "Cross-Origin-Resource-Policy": "cross-origin",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      },
+      "continue": true
+    },
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=604800, must-revalidate"
+      },
+      "continue": true
+    },
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "headers": {
+        "Cross-Origin-Opener-Policy": "unsafe-none",
+        "Cross-Origin-Embedder-Policy": "unsafe-none",
+        "Cross-Origin-Resource-Policy": "cross-origin",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      }
+    }
+  ]
+}

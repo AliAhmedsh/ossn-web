@@ -12,7 +12,7 @@ export function TopBar() {
   return (
     <header className="sticky top-0 z-20 flex items-center justify-between border-b border-slate-200 bg-white/80 px-6 py-3 backdrop-blur">
       <Link to="/home" className="text-lg font-semibold text-brand-700">
-        OSSN Web
+        Billboard
       </Link>
       <div className="flex items-center gap-3 text-sm">
         {state.user ? (

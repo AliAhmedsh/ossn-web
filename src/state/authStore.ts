@@ -49,7 +49,7 @@ export const authStore = create<AuthState>()(
         }),
     }),
     {
-      name: 'ossn-auth',
+      name: 'billboard-auth',
       partialize: (state) => ({
         accessToken: state.accessToken,
         refreshToken: state.refreshToken,
